@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.20;
 
  import "forge-std/Test.sol";  
 
@@ -78,7 +78,7 @@ contract EscrowTest is Test {
     }
 
     //Fuzz test for refund()
-    function testFuzzRefund(uint256 _amount) public {~
+    function testFuzzRefund(uint256 _amount) public {
         _amount = bound(_amount, 1 wei, 10 ether);
         vm.deal(buyer, _amount);
 
